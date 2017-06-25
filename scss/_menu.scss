@@ -1,6 +1,6 @@
 nav.container {
 	.row {
-		margin-top: 15px;
+		padding-top: 15px;
 		.logo {
 			height: 75px;
 			background-image: url(../images/logo.png);
@@ -21,6 +21,8 @@ nav.container {
 			color: #b49765;
 			display: flex;
 			justify-content: center;
+			align-items: center;
+			align-content: center;
 			ul {
 				width: 95%;
 			}
@@ -32,6 +34,7 @@ nav.container {
 				background-color: rgba(155, 155, 155, .3);
 				margin: 4px auto;
 				padding: 15px 0;
+				align-self: center;
 			}
 			@media (min-width: 640px) {
 				ul {
@@ -41,10 +44,21 @@ nav.container {
 					width: 11.66%;
 					background-color: transparent;
 					text-align: left;
+					font-size: 12px;
+				}
+				li:nth-of-type(4),
+				li:nth-of-type(5),
+				li:nth-of-type(6) {
+					text-align: right;
 				}
 				img {
 					width: 20%;
 					height: 100%;
+				}
+			}
+			@media (min-width: 780px) {
+				li {
+					font-size: 16px;
 				}
 			}
 		}

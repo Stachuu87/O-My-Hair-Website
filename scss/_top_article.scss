@@ -1,0 +1,65 @@
+.top_article {
+	padding-top: 25px;
+	div {
+		@media (min-width: 640px) {
+			height: 80vh;
+		}
+		div {
+			overflow: hidden;
+		}
+	}
+	.left {
+		padding: 20px 50px;
+		text-align: center;
+		@media(min-width: 640px) {
+			padding: 50px 20px;
+		}
+		@media(min-width: 800px) {
+			padding: 80px 20px;
+		}
+	}
+	h1 {
+		text-transform: uppercase;
+		font-size: 1.5em;
+		color: #b49765;
+		margin-bottom: 20%;
+		font-weight: 700;
+		@media(min-width: 640px) {
+			font-size: 1.7em;
+			margin-bottom: 10%;
+			margin-top: 0;
+		}
+		@media(min-width: 800px) {
+			font-size: 2em;
+			margin-bottom: 10%;
+			margin-top: 10%;
+		}
+	}
+	p {
+		color: white;
+		margin: 0 5px 40px 5px;
+		font-size: 12px;
+		@media(min-width: 640px) {
+			margin: 0 5%;
+			font-size: 15px;
+		}
+		@media(min-width: 800px) {
+			margin: 0 10%;
+			font-size: 18px;
+		}
+	}
+	.right {
+		position: relative;
+		img {
+			width: 100%;
+			@media(min-width: 640px) {
+				max-width: 75%;
+				width: auto;
+				max-height: 90%;
+				top: 10%;
+				right: 0;
+				position: absolute;
+			}
+		}
+	}
+}
