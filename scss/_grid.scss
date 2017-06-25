@@ -1,0 +1,30 @@
+$max-width: 1400px;
+$col-width: 100% / 8;
+.container {
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+	.row::before,
+	.row::after {
+		content: "";
+		display: block;
+		clear: both;
+		height: 0;
+		visibility: hidden;
+	}
+	[class*='col-'] {
+		float: none;
+		min-height: 1px;
+		width: 100%;
+	}
+	@media (min-width: 640px) {
+		[class*='col-'] {
+			float: left;
+		}
+		@for $i from 1 through 6 {
+			.col-#{$i} {
+				width: $col-width * $i;
+			}
+		}
+	}
+}

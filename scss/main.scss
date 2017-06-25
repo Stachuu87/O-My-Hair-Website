@@ -1,1 +1,22 @@
 @import "reset";
+@import "grid";
+@import "menu";
+body {
+	background-image: url(../images/background.png);
+	background-size: cover;
+	font-family: 'Lato', sans-serif;
+}
+
+.desktop {
+	display: none;
+	@media(min-width: 640px) {
+		display: inline-block;
+	}
+}
+
+.mobile {
+	display: block;
+	@media(min-width: 640px) {
+		display: none;
+	}
+}
