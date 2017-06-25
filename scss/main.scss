@@ -3,6 +3,7 @@
 @import "menu";
 @import "top_article";
 @import "salon_gallery";
+@import "team";
 body {
 	background-image: url(../images/background.png);
 	background-size: cover;
@@ -27,4 +28,38 @@ body {
 
 .container {
 	//	background-color: rgba(155, 155, 155, .3);
+}
+
+h1 {
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	word-spacing: 8px;
+	font-size: 1.5em;
+	color: #b49765;
+	margin-bottom: 20%;
+	font-weight: 700;
+	@media(min-width: 640px) {
+		font-size: 1.7em;
+		margin-bottom: 10%;
+		margin-top: 0;
+		margin-left: 10%;
+	}
+	@media(min-width: 800px) {
+		font-size: 2em;
+		margin: 10% 10%;
+	}
+}
+
+p {
+	color: white;
+	margin: 0 5px 40px 5px;
+	font-size: 12px;
+	@media(min-width: 640px) {
+		margin: 0 5%;
+		font-size: 15px;
+	}
+	@media(min-width: 800px) {
+		margin: 0 10%;
+		font-size: 18px;
+	}
 }

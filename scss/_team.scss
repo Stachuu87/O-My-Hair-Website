@@ -1,0 +1,136 @@
+.team {
+	height: 300px;
+	background-color: white;
+	.col-4 {
+		height: auto;
+		height: 350px;
+		max-height: 500px;
+		background-color: white;
+	}
+	.right {
+		position: relative;
+		display: flex;
+		justify-content: center;
+	}
+	p {
+		color: black;
+	}
+	h1 {
+		margin: 3% 3% 3% 10%;
+	}
+	.col-4 {
+		position: relative;
+	}
+}
+
+.team_pics {
+	position: absolute;
+	height: 100%;
+	width: 350px;
+	right: 0;
+	.hexagon {
+		position: absolute;
+		width: 150px;
+		height: 86.60px;
+		margin: 43.30px 0;
+		background-image: url(../images/team-1.jpg);
+		background-size: auto 161.6581px;
+		background-position: center;
+		border-left: solid 5px #b49765;
+		border-right: solid 5px #b49765;
+	}
+	.hexTop,
+	.hexBottom {
+		position: absolute;
+		z-index: 1;
+		width: 106.07px;
+		height: 106.07px;
+		overflow: hidden;
+		-webkit-transform: scaleY(0.5774) rotate(-45deg);
+		-ms-transform: scaleY(0.5774) rotate(-45deg);
+		transform: scaleY(0.5774) rotate(-45deg);
+		background: inherit;
+		left: 16.97px;
+	}
+	/*counter transform the bg image on the caps*/
+	.hexTop:after,
+	.hexBottom:after {
+		content: "";
+		position: absolute;
+		width: 140.0000px;
+		height: 80.82903768654762px;
+		-webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-40.4145px);
+		-ms-transform: rotate(45deg) scaleY(1.7321) translateY(-40.4145px);
+		transform: rotate(45deg) scaleY(1.7321) translateY(-40.4145px);
+		-webkit-transform-origin: 0 0;
+		-ms-transform-origin: 0 0;
+		transform-origin: 0 0;
+		background: inherit;
+	}
+	.hexTop {
+		top: -53.0330px;
+		border-top: solid 7.0711px #b49765;
+		border-right: solid 7.0711px #b49765;
+	}
+	.hexTop:after {
+		background-position: center top;
+	}
+	.hexBottom {
+		bottom: -53.0330px;
+		border-bottom: solid 7.0711px #b49765;
+		border-left: solid 7.0711px #b49765;
+	}
+	.hexBottom:after {
+		background-position: center bottom;
+	}
+	.hexagon:after {
+		content: "";
+		position: absolute;
+		top: 2.8868px;
+		left: 0;
+		width: 140.0000px;
+		height: 80.8290px;
+		z-index: 2;
+		background: inherit;
+	}
+	#empl1_cover,
+	#empl2_cover,
+	#empl3_cover {
+		background-image: none;
+		background-color: #b49765;
+		position: absolute;
+		top: -45px;
+		left: -5px;
+		z-index: 100;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-content: space-between;
+		opacity: 0;
+		transition: all 500ms ease;
+		h3 {
+			color: white;
+			text-align: center;
+			font-size: 20px;
+			text-transform: uppercase;
+			z-index: 100;
+		}
+	}
+	#empl1 {
+		top: 10px;
+		left: 10px;
+	}
+	#empl1:hover #empl1_cover,
+	#empl2:hover #empl2_cover,
+	#empl3:hover #empl3_cover {
+		opacity: 1;
+	}
+	#empl2 {
+		top: 10px;
+		left: 165px;
+	}
+	#empl3 {
+		left: 87.5px;
+		top: 142.5px;
+	}
+}
