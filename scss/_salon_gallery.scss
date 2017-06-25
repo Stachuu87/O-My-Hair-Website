@@ -1,0 +1,33 @@
+section.salon_gallery {
+	img {
+		width: 100%;
+	}
+	@media(min-width: 640px) {
+		max-width: 100vw;
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			.col-2 {
+				width: 25%;
+				img {
+					height: 100%;
+				}
+			}
+			.col-3 {
+				width: 37.5%;
+			}
+			.middle {
+				display: flex;
+				flex-wrap: wrap;
+				img {
+					height: 50%;
+				}
+			}
+			.left {
+				img {
+					height: 100%;
+				}
+			}
+		}
+	}
+}
