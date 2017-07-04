@@ -4,12 +4,19 @@
 @import "top_article";
 @import "salon_gallery";
 @import "team";
+@import "portfolio";
+
 body {
+
+	background-color: #929292;
+	font-family: 'Lato', sans-serif;
+}
+
+.top_sec{
 	background-image: url(../images/background.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color: #929292;
-	font-family: 'Lato', sans-serif;
 }
 
 .desktop {
@@ -62,4 +69,8 @@ p {
 		margin: 0 10%;
 		font-size: 18px;
 	}
+}
+
+.hidden {
+	display: none !important;
 }

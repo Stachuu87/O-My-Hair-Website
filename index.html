@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<section>
+	<section class="top_sec">
 		<nav class="container">
 			<div class="row mobile">
 				<div class="col-8 logo">
@@ -59,7 +59,8 @@
 		</div>
 	</section>
 	<section class="container team">
-		<div class="col-4">
+		<div class="row">
+		<div class="col-4 team_desc">
 			<h1>nasz zespół</h1>
 			<p>Lorem ipsum dolor sit amet magna. Ut tincidunt nec, ullamcorper libero at arcu elementum vel, ornare ac, magna. Vestibulum nibh porta neque, blandit quis, ipsum. Morbi ligula erat sed felis. Vestibulum massa ut mi. Aliquam nonummy, erat. Sed sollicitudin arcu. Suspendisse adipiscing.</p>
 		</div>
@@ -69,8 +70,8 @@
 					<div class="hexTop"></div>
 					<div class="hexBottom"></div>
 					<div class="hexagon" id="empl1_cover">
-						<h3>Klaudia</h3>
-						<h3>Piotrowicz</h3>
+						<h3>Name</h3>
+						<h3>Lastname</h3>
 						<div class="hexTop"></div>
 						<div class="hexBottom"></div>
 					</div>
@@ -80,8 +81,8 @@
 					<div class="hexTop"></div>
 					<div class="hexBottom"></div>
 					<div class="hexagon" id="empl2_cover">
-						<h3>Imię</h3>
-						<h3>Nazwisko</h3>
+						<h3>Name</h3>
+						<h3>Lastname</h3>
 						<div class="hexTop"></div>
 						<div class="hexBottom"></div>
 					</div>
@@ -90,8 +91,8 @@
 					<div class="hexTop"></div>
 					<div class="hexBottom"></div>
 					<div class="hexagon" id="empl3_cover">
-						<h3>Imię</h3>
-						<h3>Nazwisko</h3>
+						<h3>Name</h3>
+						<h3>Lastname</h3>
 						<div class="hexTop"></div>
 						<div class="hexBottom">
 
@@ -100,9 +101,39 @@
 				</div>
 			</div>
 		</div>
+		</div>
+	</section>
+	<section class="container portfolio">
+		<div class="row port_nav">
+			<h2>PORTFOLIO</h2>
+			<ul>
+				<li class="allBtn">Wszystkie</li>
+				<li class="styleBtn">Stylizacja</li>
+				<li class="colourBtn">Kolor</li>
+				<li class="cutBtn">Cięcie</li>
+			</ul>
+		</div>
+		<div class="fullScreen hidden">
+			<div class="center">
+				<button class="fullScreenClose"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button>
+				<div class="picContainer"></div>
+			</div>
+		</div>
+		<div class="row pics">
+
+			<img src="images/portfolio/1.jpg" class="style">
+			<img src="images/portfolio/2.jpg" class="cut">
+			<img src="images/portfolio/9.jpg" class="style">
+			<img src="images/portfolio/10.jpg" class="style">
+			<img src="images/portfolio/5.jpg" class="cut">
+			<img src="images/portfolio/7.jpg" class="cut">
+			<img src="images/portfolio/8.jpg" class="colour">
+			<img src="images/portfolio/4.jpg" class="colour">
+			<img src="images/portfolio/3.jpg" class="cut">
+			<img src="images/portfolio/6.jpg" class="colour">
+		</div>
 	</section>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 	<script src="js/app.js"></script>
 </body>
 

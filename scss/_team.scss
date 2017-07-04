@@ -1,39 +1,54 @@
 .team {
-	height: 300px;
 	background-color: white;
-	.col-4 {
-		height: auto;
-		height: 350px;
-		max-height: 500px;
-		background-color: white;
-	}
-	.right {
-		position: relative;
-		display: flex;
-		justify-content: center;
-	}
-	p {
-		color: black;
-	}
-	h1 {
-		margin: 3% 3% 3% 10%;
-	}
-	.col-4 {
-		position: relative;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	.row{
+		width: 100%;
+		.col-4 {
+			height: 300px;
+			height: 350px;
+			max-height: 500px;
+			background-color: white;
+		}
+		.right {
+			position: relative;
+			display: flex;
+			justify-content: center;
+		}
+		p {
+			color: black;
+			position: absolute;
+			top: 90px;
+			font-size: 18px;
+			text-align: justify;
+			width: 80%;
+		}
+		h1 {
+			margin: 3% 3% 3% 10%;
+			position: absolute;
+			top: 20px;
+		}
+		.col-4 {
+			position: relative;
+			display: flex;
+			justify-content: center;
+		}
 	}
 }
 
 .team_pics {
-	position: absolute;
-	height: 100%;
+	height: 300px;
 	width: 350px;
-	right: 0;
+	margin: 0 auto;
+	position: absolute;
 	.hexagon {
 		position: absolute;
 		width: 150px;
 		height: 86.60px;
 		margin: 43.30px 0;
-		background-image: url(../images/team-1.jpg);
+		background-image: url(../images/girl.png);
 		background-size: auto 161.6581px;
 		background-position: center;
 		border-left: solid 5px #b49765;
@@ -133,4 +148,18 @@
 		left: 87.5px;
 		top: 142.5px;
 	}
+}
+
+@media(min-width: 640px) {
+	.team {
+		.row{
+		.team_pics {
+
+		}
+		p{
+			top: 100px;
+		}
+		}
+	}
+
 }
