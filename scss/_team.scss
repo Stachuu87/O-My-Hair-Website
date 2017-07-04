@@ -11,6 +11,9 @@
 			height: 350px;
 			max-height: 500px;
 			background-color: white;
+//			position: relative;
+//			display: flex;
+//			justify-content: center;
 		}
 		.right {
 			position: relative;
@@ -30,11 +33,7 @@
 			position: absolute;
 			top: 20px;
 		}
-		.col-4 {
-			position: relative;
-			display: flex;
-			justify-content: center;
-		}
+
 	}
 }
 
