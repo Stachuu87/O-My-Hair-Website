@@ -16,7 +16,7 @@ gulp.task('sass', function () {
 	return gulp.src('scss/*')
 		.pipe(sourcemaps.init())
 		.pipe(sass({
-			outputStyle: 'expanded',
+			outputStyle: 'compressed',
 			sourceCommenets: 'map'
 		}))
 		.pipe(autoprefixer())
