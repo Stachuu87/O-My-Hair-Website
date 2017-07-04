@@ -85,9 +85,11 @@
 			height: 100%;
 			margin: 1%;
 			display: inline;
-			border-radius: 5px 10%;
+			border-radius: 5px 15%;
 			transition: all 200ms ease;
-			
+		}
+		img:nth-of-type(2n) {
+			border-radius: 15% 5px;
 		}
 		
 		img:hover{
