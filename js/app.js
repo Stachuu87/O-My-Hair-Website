@@ -8,6 +8,12 @@ $(document).ready(function () {
 	hamburger.on("click", function () {
 		menuList.slideToggle();
 	});
+	
+	menuList.on("click", function(){
+		if (window.innerWidth < 640) {
+			menuList.slideToggle();
+		}
+	})
 
 	var resize = function () {
 		if (window.innerWidth >= 640) {
@@ -161,9 +167,15 @@ $(document).ready(function () {
 	})
 	
 	$(document).on('click', 'a', function(event){
+		var diff = 0;
+		if (window.innerWidth < 640) {
+			diff = 300;
+		} else {
+			diff = 0;
+		}
 		event.preventDefault();
 		$('body').animate({
-			scrollTop: $($.attr(this, 'href')).offset().top
+			scrollTop: ($($.attr(this, 'href')).offset().top) -diff
 		}, 800);
 	});
 	

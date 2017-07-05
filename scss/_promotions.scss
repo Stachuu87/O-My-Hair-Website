@@ -8,7 +8,7 @@
 	.rightArrow{
 		height: 100%;
 		width: 50px;
-		background-color: rgba(255,255,255, .5);
+		background-color: rgba(255,255,255, .2);
 		position: absolute;
 		top: 0;
 		font-size: 40px;
@@ -55,6 +55,7 @@
 		height: 350px;
 		.leftArrow, .rightArrow {
 			line-height: 350px;
+			
 		}
 		.bannerLeft,
 		.bannerRight {
