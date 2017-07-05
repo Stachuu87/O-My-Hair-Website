@@ -1,4 +1,7 @@
 $(document).ready(function () {
+	
+	/* show / hide hamburger menu */
+	
 	var hamburger = $(".hamburger")
 	var menuList = $(".menu")
 
@@ -20,6 +23,8 @@ $(document).ready(function () {
 	window.addEventListener("resize", function () {
 		resize();
 	});
+	
+	/* portolio pictures full screen controll */
 	
 	var allPics = $(".pics").find("img");
 	var stylePics = $(".pics").find(".style");
@@ -62,12 +67,12 @@ $(document).ready(function () {
 		fullScreen.addClass("hidden");
 	})
 	
+	/* controll script of arrows in promotions slides */
+	
 	var banners = $(".promo");
 	var leftArrows = $(".leftArrow");
 	var rightArrows = $(".rightArrow");
-	
 
-	
 	leftArrows.on("click", function(event){
 		var visible = banners.eq(0).parent().find(".visible");
 		visible.removeClass("visible");
@@ -104,7 +109,7 @@ $(document).ready(function () {
 		nextSlide();
 	})
 	
-
+	/* interval for scrolling promotions screens */
 	
 	var promotions = $(".promotions")
 	
@@ -122,10 +127,10 @@ $(document).ready(function () {
 		}, 2500)
 	})
 	
+	/* form controll */
+	
 	var submitBtn = $("#submit");
 	var form = $("form");
-
-	
 	
 	submitBtn.on("click", function(){
 		event.preventDefault();
@@ -152,11 +157,14 @@ $(document).ready(function () {
 				fullScreen.fadeOut();
 				fullScreen.addClass("hidden");
 			}, 1500)
-			
 		}
-		
-		
-		
 	})
+	
+	$(document).on('click', 'a', function(event){
+		event.preventDefault();
+		$('body').animate({
+			scrollTop: $($.attr(this, 'href')).offset().top
+		}, 800);
+	});
 	
 });
