@@ -174,8 +174,9 @@ $(document).ready(function () {
 			diff = 0;
 		}
 		event.preventDefault();
-		$('body').animate({
-			scrollTop: ($($.attr(this, 'href')).offset().top) -diff
+		var scrollto=$($(this).attr('href')).offset().top-diff;
+		$('body,html').animate({
+			scrollTop: scrollto
 		}, 800);
 	});
 	
