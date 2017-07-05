@@ -1,0 +1,66 @@
+.contact {
+	height: 1200px;
+	max-width: 100%;
+	background-color: dimgray;
+	text-align: justify;
+	p{
+		color: lightgray;
+	}
+}
+
+
+.contactForm{
+	position: relative;
+
+	.socialIcon{
+		position: absolute;
+		width: 97px;
+		height: 97px;
+		background-image: url(../images/social-icons.png);
+	}
+	.facebook{
+		background-position: -40px -8px;
+		top: 50px;
+	}
+	.twitter{
+		background-position: -167px -8px;
+		top: 147px;
+	}
+	.instagram{
+		background-position: -297px -8px;
+		top: 244px;
+	}
+	form{
+		position: absolute;
+		left: 120px;
+		top: 50px;
+		input, textarea{
+			width: 80%;
+			margin-bottom: 15px;
+			font-size: 20px;
+			font-family: 'Lato', sans-serif;
+		}
+		input::placeholder, textarea::placeholder{
+			color: lightgray;
+		}
+		input{
+			height: 40px;
+		}
+		textarea{
+			resize: none;
+		}
+		input[type="submit"]{
+			background-color: dimgrey;
+			border: none;
+			color: white;
+			letter-spacing: 5px;
+			font-size: 25px;
+		}
+	}
+}
+
+@media(min-width: 640px) {
+	.contact{
+		height: 550px;
+	}
+}

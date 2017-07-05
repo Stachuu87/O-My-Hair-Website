@@ -1,0 +1,72 @@
+.promo {
+	height: 700px;
+	background-color: white;
+	position: relative;
+		
+	
+	.leftArrow, 
+	.rightArrow{
+		height: 100%;
+		width: 50px;
+		background-color: rgba(255,255,255, .5);
+		position: absolute;
+		top: 0;
+		font-size: 40px;
+		line-height: 700px;
+		
+	}
+	.leftArrow{
+		left: 0;
+	}
+	.rightArrow{
+		right: 0;
+		text-align: right;
+	}
+	.bannerLeft{
+		width: 100%;
+		height: 50%;
+		overflow: hidden;
+	}
+	.bannerRight {
+		width: 100%;
+		height: 50%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		h2{
+			font-size: 45px;
+			margin-top: 50px;
+		}
+		span {
+			margin-bottom: 80px;
+			width: 80%;
+		}
+	}
+}
+
+.firstBan{
+
+}
+
+@media(min-width: 640px) {
+	.promo{
+		height: 350px;
+		.leftArrow, .rightArrow {
+			line-height: 350px;
+		}
+		.bannerLeft,
+		.bannerRight {
+			width: 50%;
+			height: 100%;
+		}
+		.bannerRight{
+			position: absolute;
+			top: 0;
+			right: 0;	
+		}
+	}
+
+	
+}

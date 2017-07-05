@@ -56,10 +56,107 @@ $(document).ready(function () {
 	})
 	
 	closeBtn.on("click", function(){
-		var child = fullScreen.find("img");
-		child.hide();
+		var child = fullScreen.find(".picContainer");
+		child.empty();
 		fullScreen.fadeOut();
 		fullScreen.addClass("hidden");
+	})
+	
+	var banners = $(".promo");
+	var leftArrows = $(".leftArrow");
+	var rightArrows = $(".rightArrow");
+	
+
+	
+	leftArrows.on("click", function(event){
+		var visible = banners.eq(0).parent().find(".visible");
+		visible.removeClass("visible");
+		visible.fadeOut();
+		visible.addClass("hidden");
+		if(banners.index(visible) ==0) {
+			banners.eq(banners.length-1).fadeIn();
+			banners.eq(banners.length-1).removeClass("hidden");
+			banners.eq(banners.length-1).addClass("visible");
+		} else {
+			visible.prev().fadeIn();
+			visible.prev().addClass("visible");
+			visible.prev().removeClass("hidden");
+		}	
+	})
+	
+	function nextSlide () {
+		var visible = banners.eq(0).parent().find(".visible");
+		visible.removeClass("visible");
+		visible.fadeOut();
+		visible.addClass("hidden");
+		if(banners.index(visible) == banners.length -1) {
+			banners.eq(0).removeClass("hidden");
+			banners.eq(0).fadeIn();
+			banners.eq(0).addClass("visible");
+		} else {
+			visible.next().addClass("visible");
+			visible.next().fadeIn();
+			visible.next().removeClass("hidden");
+		}	
+	}
+	
+	rightArrows.on("click", function(event){
+		nextSlide();
+	})
+	
+
+	
+	var promotions = $(".promotions")
+	
+	var intervalId = setInterval(function(){
+		nextSlide();
+	}, 2500)
+	
+	promotions.on("mouseover", function(){
+		clearInterval(intervalId);
+	})
+	
+	promotions.on("mouseleave", function(){
+		intervalId = setInterval(function(){
+			nextSlide();
+		}, 2500)
+	})
+	
+	var submitBtn = $("#submit");
+	var form = $("form");
+
+	
+	
+	submitBtn.on("click", function(){
+		event.preventDefault();
+		var name = form.find("input").eq(0);
+		var phone = form.find("input").eq(1);
+		var mail = form.find("input").eq(2);
+		var message = form.find("textarea");
+		
+		if(name.val().length == 0 || phone.val().length < 7 || mail.val().indexOf("@") < 0) {
+			alert("Prosimy uzupełnić wszystkie dane w formularzu. !!UWAGA, ADRES MAIL POWINIEN ZAWIERAĆ ZNAK @!!")
+		} else {
+			name.val("");
+			phone.val("");
+			mail.val("");
+			message.val("");
+			var messageSent = document.createElement("h1");
+			messageSent.innerText = "Dziękujemy, Twoja wiadomość została wysłana"
+			fullScreen.find(".picContainer").append(messageSent);
+			fullScreen.fadeIn();
+			fullScreen.removeClass("hidden");
+			this.timeoutId = setTimeout(function(){
+				var child = fullScreen.find(".picContainer");
+				child.empty();
+				fullScreen.fadeOut();
+				fullScreen.addClass("hidden");
+			}, 1500)
+			
+		}
+		
+		
+		
 	})
 	
 });

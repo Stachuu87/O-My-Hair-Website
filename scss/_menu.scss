@@ -27,14 +27,17 @@ nav.container {
 				width: 95%;
 			}
 			li {
-				color: white;
-				height: 45px;
+ 				height: 45px;
 				text-transform: uppercase;
 				text-align: center;
 				background-color: rgba(155, 155, 155, .3);
 				margin: 4px auto;
 				padding: 15px 0;
 				align-self: center;
+				a {
+					text-decoration: none;
+					color: white;
+				}
 			}
 			@media (min-width: 640px) {
 				ul {
