@@ -180,4 +180,26 @@ $(document).ready(function () {
 		}, 800);
 	});
 	
+	var upBtn = $(".upBtn");
+	upBtn.fadeOut();
+	
+	function checkPosition () {
+		if ($(window).scrollTop() > 100) {
+			upBtn.fadeIn();
+		} else {
+			upBtn.fadeOut();
+		}
+	};
+	
+	checkPosition();
+	
+	$(window).scroll(function(){
+		checkPosition();
+	})
+	
+	upBtn.on("click", function(){
+		$('body,html').animate({
+			scrollTop: 0
+		}, 800);
+	})
 });
